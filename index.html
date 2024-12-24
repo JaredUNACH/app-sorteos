@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planeta Geek Raffle App">
+    <meta name= "robots" content= "index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Aplicación para Sorteos</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <img src="./assets/imgs/logo.svg" alt="logo Teyakanxool">
+        </div>
+        <h1>APP DE SORTEOS</h1>
+    </header>
+    <main>
+        <section class="table-section">
+            <div class="buttons-container">
+                <p>
+                    <!-- Nuevo diseño del input de archivo -->
+                    <div class="input-div">
+                        <input class="input" id="csvFileInput" name="file" type="file" accept=".csv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                            <polyline points="16 16 12 12 8 16"></polyline>
+                            <line y2="21" x2="12" y1="12" x1="12"></line>
+                            <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                            <polyline points="16 16 12 12 8 16"></polyline>
+                        </svg>
+                    </div>
+                </p>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Tabla de Concursantes</th>
+                        </tr>
+                        <tr>
+                            <th class="number-column">N°</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo_tabla">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="winner-section">
+            <div>
+                <button id="button" onclick="chooseWinNer()"><!--<a id="button_link" href="#footer"></a>-->ESCOGER GANADOR</button>
+            </div>
+            <div>
+                <p>¡EL GANADOR ES...!:</p>
+                <p id="fireworks_container"><img id="fireworks" src="./assets/imgs/icegif-85.gif" alt=""></p>
+                <p id="winner"></p>
+                <p id="gif-container" class="gif-container">
+                    <img id="gif" alt="gif variados">
+                </p>
+            </div>
+        </section>
+        <footer id="footer">
+            <section>
+                <div>
+                    <p>Cortesía de:</p>
+                    <p><a href="" target="_blank">Teyakanxool</a></p>
+                </div>
+            </section>
+        </footer>
+    </main>
+    <script type="text/javascript" src="./src/rowsHandler.js"></script>
+    <script type="text/javascript" src="./src/arrayMaker.js"></script>
+    <script src="./src/index.js"></script>
+    <script src="./src/csvHandler.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+	--text-input-field: #F7F7F7;
+	--very-light-gray:#e9e8e8;
+	--header-font-color: rgb(117, 105, 105);
+    --nav-left-borders: rgb(24, 24, 24);
+    --background-black: #282828;
+    --background-nav: rgb(40, 40, 40);
+    --background-article: #292e38;
+    --background-sections: #181c23;
+    --planeta-geek-celeste: #03fbfa;
+    --planeta-geek-shadow-celeste: #2e6e70;
+    --planeta-geek-celeste-border: #5fe1e8;
+    --red-notifications: #c40d24;
+    --launches-fucsia: #fe009d;
+    --fucsia-shadow: #BF0076;
+    --palid-red: #FF214F;
+    --vivid-red: #cf2e2e;
+    --planeta-geek-yellow: #FBFA03;
+    --planeta-geek-purple: #7E03FB;
+    --purple-shadow: #5F02BC;
+    --planeta-geek-green: #80FB03;
+	--planeta-geek-green-shadow: #60BC02;
+    --planeta-geek-blue: #0304FB;
+    --planeta-geek-blue-shadow: #0203BC;
+    --ss: 1.2rem;
+    --sm: 1.4rem;
+    --md: 1.5rem;
+    --lg: 1.8rem;
+	--xlg: 2.2rem;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+header {
+	width: 100%;
+	padding-top: 4rem;
+	background-color: var(--background-sections);
+}
+
+header div {
+	width: 30rem;
+	margin: 0 auto;
+}
+
+header div img {
+	width: 30rem;
+}
+
+main {
+	width: 100%;
+	font-size: var(--sm);
+	background-color: var(--background-sections);
+}
+
+h1 {
+	text-align: center;
+	padding-bottom: 4rem;
+	background-color: var(--background-sections);
+	color: var(--white);
+}
+
+main div {
+	padding-top: 3rem;
+}
+
+.buttons-container {
+	width: 30rem;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0 auto;
+}
+
+.buttons-container button {
+	width: 10rem;
+	height: 3rem;
+	border-radius: 1.5rem;
+}
+
+#agregar_fila {
+	background-color: var(--white);
+	border: 0.3rem solid var(--planeta-geek-green-shadow);
+	color: var(--planeta-geek-green-shadow);
+	font-weight: bold;
+}
+
+#agregar_fila:active {
+	background-color: var(--planeta-geek-green);
+	color: var(--white);
+}
+
+#eliminar_fila {
+	background-color: var(--white);
+	border: 0.3rem solid var(--palid-red);
+	color: var(--palid-red);
+	font-weight: bold;
+}
+
+#eliminar_fila:active {
+	background-color: var(--red-notifications);
+	color: var(--white);
+}
+
+.table-section {
+	width: 100%;
+}
+
+.table-container {
+	width: 30rem;
+	margin: 0 auto;
+}
+
+table {
+	margin: 0 auto;
+	font-size: var(--sm);
+}
+
+thead {
+	background-color: var(--planeta-geek-celeste);
+}
+
+thead tr:first-child th {
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+
+thead tr th {
+	text-align: center;
+	padding: 1rem;
+	font-size: var(--md);
+}
+
+.number-column {
+	width: 2rem;
+}
+
+tbody {
+	color: var(--white);
+}
+
+tbody tr td {
+	padding: 0.6rem;
+	height: 4rem;
+}
+
+tbody tr td:first-child {
+	text-align: center;
+}
+
+tbody tr td input {
+	border: 0.1rem solid var(--planeta-geek-shadow-celeste);
+	background-color: var(--background-sections);
+	width: 100%;
+	height: 3rem;
+	border-radius: 1rem;
+	font-size: var(--md);
+	padding: 0.5rem;
+	color: var(--white);
+}
+
+tbody tr td input:hover {
+	border: 0.1rem solid var(--planeta-geek-celeste);
+}
+
+.winner-section {
+	text-align: center;
+	color: var(--white);
+	font-size: var(--lg);
+	padding-top: 3rem;
+}
+
+#button {
+	width: 20rem;
+	height: 4rem;
+	border-radius: 1.5rem;
+	background-color: var(--planeta-geek-celeste);
+	border: 0.3rem solid var(--planeta-geek-shadow-celeste);
+	font-weight: bold;
+}
+
+#button:active {
+	background-color: var(--white);
+	color: var(--planeta-geek-blue-shadow);
+}
+
+#button a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: var(--black);
+}
+
+#fireworks_container {
+	width: 100%;
+	position: relative;
+}
+
+#fireworks_container img {
+	width: 25.8rem;
+	position: absolute;
+	left: calc(50% - 12.9rem);
+	/* top: -5rem; */
+	display: none;
+}
+
+#winner {
+	min-height: 25.6rem;
+	padding: 6rem 0 6rem;
+	font-size: var(--xlg);
+	color: var(--planeta-geek-green-shadow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gif-container {
+	width: 30rem;
+	height: 26.8rem;
+	display: none;
+	margin: 0 auto;
+}
+
+#gif {
+	max-width: 30rem;
+	max-height: 26.8rem;
+	margin: 0 auto;
+}
+
+footer {
+	text-align: center;
+	color: var(--white);
+	padding: 3rem 0 3rem;
+}
+
+footer div {
+	width: 30rem;
+	margin: 0 auto;
+}
+
+footer p {
+	padding-top: 2rem;
+	color: var(--header-font-color);
+}
+
+footer div p:first-child {
+	border-top: 0.1rem solid var(--header-font-color);
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--planeta-geek-blue);
+}
+/* From Uiverse.io by akshat-patel28 */
+.input-div {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid rgb(1, 235, 252);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+	animation: flicker 2s linear infinite;
+  }
+  
+  .icon {
+	color: rgb(1, 235, 252);
+	font-size: 2rem;
+	cursor: pointer;
+	animation: iconflicker 2s linear infinite;
+  }
+  
+  .input {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer !important;
+  }
+  
+  @keyframes flicker {
+	0% {
+	  border: 2px solid rgb(1, 235, 252);
+	  box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+	}
+  
+	5% {
+	  border: none;
+	  box-shadow: none;
+	}
+  
+	10% {
+	  border: 2px solid rgb(1, 235, 252);
+	  box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+	}
+  
+	25% {
+	  border: none;
+	  box-shadow: none;
+	}
+  
+	30% {
+	  border: 2px solid rgb(1, 235, 252);
+	  box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+	}
+  
+	100% {
+	  border: 2px solid rgb(1, 235, 252);
+	  box-shadow: 0px 0px 100px rgb(1, 235, 252), inset 0px 0px 10px rgb(1, 235, 252), 0px 0px 5px rgb(255, 255, 255);
+	}
+  }
+  
+  @keyframes iconflicker {
+	0% {
+	  opacity: 1;
+	}
+  
+	5% {
+	  opacity: 0.2;
+	}
+  
+	10% {
+	  opacity: 1;
+	}
+  
+	25% {
+	  opacity: 0.2;
+	}
+  
+	30% {
+	  opacity: 1;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
